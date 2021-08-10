@@ -1,0 +1,86 @@
+<head>
+    <title>{{title}}</title>
+
+    <link rel="stylesheet" href="stylesheets/answer.css" />
+
+</head>
+
+<div class="container">
+    <form class="form-group" action="/answer" method="POST"  enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="mt-5">
+                    <a href="/discous" class="btn btn-info">back</a>
+                </div>
+            </div>
+            <div class="col-sm-10">
+                <div class="form-group">
+                    <label for="Answer"><h2 class="mt-4 ml-4">post your Answer</h2></label>
+                    <textarea
+                        class="form-control rounded-0"
+                        name="answer"
+                        id="Answer"
+                        rows="5"
+                    ></textarea>
+                </div>
+                                 <div style="width: 600px;  border: 2px solid red; padding: 5px;" class="message">
+<p class="text-danger">Video, image and code If you do not have these three, your post will not be uploaded. So make sure all three are added</p>
+                 </div>
+                <div class="mt-4 bg-info p-4">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-lg-4">
+                            <div class="code p-3 bg-dark">
+                                <p class="text-danger">put answer code hear</p>
+                                <textarea name="answercode" id="code"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-lg-8">
+                            <p class="text-light"> upload successful coding video </p>
+                            <div class="Upload-cont my-3" id="Upload-img">
+                                <img id="output" alt="" />
+                            </div>
+                            <div id="videoSourceWrapper">
+                               <p class="text-light"> upload successful coding video </p>
+                                <video controls>
+                                    <source id="videoSource" />
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="my-5 px-5 mx-auto bg-dark float-lg-left float-none text-white rounded text-center">
+            <label for="upload" class="m-0 py-2">Upload screenshort
+                <input
+                    type="file"
+                    class="d-none form-control"
+                    accept="image/*"
+                    onchange="loadFile(event)"
+                    id="upload"
+                    name="Image"
+                />
+            </label>
+        </div>
+        <div class="my-5 ml-0 ml-lg-4 px-5 bg-dark float-lg-left text-white float-none rounded text-center">
+            <label for="uploadVideoFile" class="m-0 py-2">Upload video 
+                <input
+                    type="file"
+                    class="d-none form-control"
+                    id="uploadVideoFile"
+                    accept="video/*"
+                    name="videoupload"
+                />
+            </label>
+        </div>
+        <div class="float-lg-right float-none text-center my-5" style="width: 100%;">
+            <input
+                type="submit"
+                id="send"
+                class="btn btn-dark px-5 mx-auto float-lg-right float-none   form-control"
+            />
+        </div>
+
+    </form>
+</div>
+<script type="text/javaScript" src="javascripts/answer.js"></script>

@@ -1,0 +1,120 @@
+
+<head>
+    <title>{{title}}</title>
+   <link rel="stylesheet" href="stylesheets/sign-up.css">
+   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+     <div class="bg-image">
+        <img src="images/bg-image.jpg" alt="" />
+    </div>
+    <section>
+        <div class="container mt-5">
+            <form class="form-group" action='/sign-up' method="POST" enctype="multipart/form-data" >
+                <h1>sign up</h1>
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-sm-6">
+                        <div class="profile mx-auto">
+                            <img
+                                class="img-circle"
+                                id="output" 
+                                alt=""
+                            />
+                            <div class="icone">
+                                <label for="file">
+                                    <img src="images/upload.png" alt="" />
+                                    <input type="file" name="Image" accept="image/*"  onchange="loadFile(event)" id="file" />
+                                </label>
+                            </div>
+                        </div>
+                        <p class="text-danger">{{#if errMessage }}{{errMessage}}{{/if}}</p>
+
+                        <div class="mt-5">
+                            <label for="Full-Name">Full Name</label>
+                            <input
+                                class="form-control rounded-pill"
+                                type="text"
+                                name="Username"
+                                id="Full-Name"
+                            />
+                          
+                            <span></span>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-6 mb-5">
+                        <p class="text-danger">{{#if userExist}}{{userExist}}{{/if}}</p>
+                        <label for="Gmail">Gmail</label>
+                        <input
+                            class="form-control rounded-pill"
+                            type="email"
+                            name="email"
+                            id="Gmail"
+                        />
+                       
+                        <label for="Phone">Phone</label>
+                        <input
+                            class="form-control rounded-pill"
+                            type="number"
+                            name="phone"
+                            id="Phone"
+                        />
+                       
+                        <label for="New-Password">Create Password</label>
+                        <input
+                            class="form-control rounded-pill"
+                            type="password"
+                            name="password"
+                            id="New-Password"
+                        />
+                         
+                        <label for="Re-Password">Conforme password</label>
+                        <input
+                            class="form-control rounded-pill"
+                            type="text"
+                            name="RePassword"
+                            id="Re-Password"
+                        />
+                        
+                        <div class="condition">
+                            <label for="Check"
+                                >
+                                <input type="checkbox" id="Check" />
+                            </label>
+
+                            <a href="#">agree with <span>terms and condition</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-cont mt-5">
+                    <input class="btn" type="submit" value="signin" />
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+var loadFile = function(event) {
+	var image = document.getElementById('output');
+	image.src = URL.createObjectURL(event.target.files[0]);
+};
+
+axios.get('http://localhost:3000/sign-up')
+  .then(function (response) {
+    // handle success
+    console.log(response);
+  })
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
+  .then(function () {
+    // always executed
+  });
+
+//form validation
+ 
+    </script>
+</body>
+
+  

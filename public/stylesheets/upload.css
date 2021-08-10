@@ -1,0 +1,40 @@
+*::-webkit-scrollbar {
+    width: 20px;
+    background-color: blue;
+    border-radius: 20px;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 20px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+video {
+    width: 100%;
+    height: 80%;
+}
+#Upload-img {
+    width: 100%;
+    height: 200px;
+}
+#videoSourceWrapper {
+    width: 100%;
+    height: 200px;
+}
+.code {
+    height: 50vh;
+    color: white;
+}
+textarea {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: none;
+}
+textarea:focus {
+    outline: none;
+}

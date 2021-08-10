@@ -1,0 +1,407 @@
+<head>
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="stylesheets/admin.css" />
+</head>
+<div class="svg-design">
+    <svg viewBox="0 0 968 740" fill="none">
+        <path
+            d="M405.999 663.998C334.973 663.998 266.145 639.371 211.241 594.312C156.337 549.254 118.756 486.552 104.899 416.891C91.043 347.23 101.769 274.92 135.251 212.28C168.732 149.641 222.897 100.549 288.516 73.3689C354.136 46.1885 427.15 42.6017 495.117 63.2194C563.085 83.8372 621.8 127.384 661.26 186.44C700.72 245.496 718.482 316.407 711.521 387.09C704.559 457.774 673.304 523.858 623.081 574.08C594.64 602.677 560.809 625.349 523.547 640.784C486.284 656.218 446.331 664.109 405.999 663.998V663.998ZM405.999 51.9984C237.821 51.9984 100.999 188.821 100.999 356.998C100.999 525.176 237.821 661.998 405.999 661.998C574.177 661.998 710.999 525.176 710.999 356.998C710.999 188.821 574.177 51.9984 405.999 51.9984Z"
+            fill="#3F3D56"
+        ></path>
+        <path
+            d="M875.944 564.097C834.988 607.497 778.47 632.851 718.821 634.582C659.172 636.313 601.278 614.279 557.874 573.327C467.494 488.047 463.364 345.637 548.654 255.257C589.608 211.857 646.125 186.502 705.773 184.771C765.42 183.04 823.312 205.075 866.714 246.027C957.094 331.317 961.224 473.717 875.944 564.097Z"
+            fill="#3F3D56"
+        ></path>
+        <path
+            d="M511.294 661.677C526.206 661.677 538.294 649.588 538.294 634.677C538.294 619.765 526.206 607.677 511.294 607.677C496.382 607.677 484.294 619.765 484.294 634.677C484.294 649.588 496.382 661.677 511.294 661.677Z"
+            fill="#3F3D56"
+        ></path>
+        <path
+            d="M265.4 112.973C280.312 112.973 292.4 100.885 292.4 85.973C292.4 71.0613 280.312 58.973 265.4 58.973C250.489 58.973 238.4 71.0613 238.4 85.973C238.4 100.885 250.489 112.973 265.4 112.973Z"
+            fill="#3F3D56"
+        ></path>
+        <path
+            d="M467.294 241.677C476.683 241.677 484.294 234.066 484.294 224.677C484.294 215.288 476.683 207.677 467.294 207.677C457.905 207.677 450.294 215.288 450.294 224.677C450.294 234.066 457.905 241.677 467.294 241.677Z"
+            fill="#3F3D56"
+        ></path>
+    </svg>
+
+</div>
+<div class="svg-design-2">
+    <svg viewBox="0 0 451 451" fill="none">
+        <path
+            d="M388.944 380.097C347.988 423.497 291.47 448.851 231.821 450.582C172.172 452.313 114.278 430.279 70.8741 389.327C-19.5059 304.047 -23.6359 161.637 61.6541 71.2567C102.608 27.8566 159.125 2.50238 218.773 0.771428C278.42 -0.959521 336.312 21.0746 379.714 62.0267C470.094 147.317 474.224 289.717 388.944 380.097Z"
+            fill="#3F3D56"
+        ></path>
+    </svg>
+
+</div>
+<nav class="navbar navbar-light bg-light">
+    <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+    >
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav m-auto" style="width: 40vw;">
+            <li class="nav-item mt-3 position-relative">
+                <a class="nav-link btn btn-danger px-5" href="#">Reported </a>
+                <div
+                    class="count m-2 position-absolute rounded-pill d-flex justify-content-center align-items-center"
+                >
+                    <span class="d-block">20</span>
+                </div>
+                <div
+                    class="like m-2 position-absolute rounded-pill d-flex justify-content-center align-items-center"
+                >
+                    <span
+                        class="iconify"
+                        data-inline="false"
+                        data-icon="octicon:alert-16"
+                        style="color: #ffffff; font-size: 20px"
+                    ></span>
+                </div>
+            </li>
+            <li class="nav-item mt-4 position-relative">
+                <a class="nav-link btn btn-info" href="#Liked">Like</a>
+                <div
+                    class="count m-2 position-absolute rounded-pill d-flex justify-content-center align-items-center"
+                >
+                    <span class="d-block">20</span>
+                </div>
+                <div
+                    class="like m-2 position-absolute rounded-pill d-flex justify-content-center align-items-center"
+                >
+                    <span
+                        class="iconify"
+                        data-inline="false"
+                        data-icon="ant-design:like-filled"
+                        style="color: #ffffff; font-size: 20px"
+                    ></span>
+                </div>
+            </li>
+            <li class="nav-item mt-4 position-relative">
+                <a class="nav-link btn btn-dark" href="#unLiked">DisLike</a>
+                <div
+                    class="count m-2 position-absolute rounded-pill d-flex justify-content-center align-items-center"
+                >
+                    <span class="d-block">20</span>
+                </div>
+                <div
+                    class="like m-2 position-absolute rounded-pill d-flex justify-content-center align-items-center"
+                >
+                    <span
+                        class="iconify"
+                        data-inline="false"
+                        data-icon="ant-design:dislike-filled"
+                        style="font-size: 20px; color: rgb(255, 255, 255)"
+                    ></span>
+                </div>
+            </li>
+            <li class="nav-item mt-4 position-relative">
+                <a class="nav-link btn btn-dark" href="#Q&A">Q&A</a>
+                <div
+                    class="count m-2 position-absolute rounded-pill d-flex justify-content-center align-items-center"
+                >
+                    <span class="d-block">20</span>
+                </div>
+                <div
+                    class="like m-2 position-absolute rounded-pill d-flex justify-content-center align-items-center"
+                >
+                    <span
+                        class="iconify"
+                        data-inline="false"
+                        data-icon="teenyicons:tick-circle-solid"
+                        style="color: #ffffff; font-size: 20px"
+                    ></span>
+                </div>
+            </li>
+            <li class="nav-item mt-4 position-relative">
+                <a class="nav-link btn btn-dark" href="#Blocked">Blocked</a>
+                <div
+                    class="count m-2 position-absolute rounded-pill d-flex justify-content-center align-items-center"
+                >
+                    <span class="d-block">20</span>
+                </div>
+                <div
+                    class="like m-2 position-absolute rounded-pill d-flex justify-content-center align-items-center"
+                >
+                    <span
+                        class="iconify"
+                        data-inline="false"
+                        data-icon="fluent:presence-blocked-12-regular"
+                        style="font-size: 20px; color: rgb(255, 255, 255)"
+                    ></span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-4 col-lg-2">
+            <h2>Reported</h2>
+
+            <div
+                class="avathar-Answer rounded-pill ml-auto mr-auto mt-3 text-center position-relative"
+            >
+                <img src="profile/{{user.UserAnswer._id}}.jpg" class="rounded-pill" alt="" />
+                <div class="icon position-absolute">
+                    <span>{{user.report}}</span>
+                    <span
+                        class="iconify"
+                        data-inline="false"
+                        data-icon="octicon:alert-16"
+                        style="color: #7e0a0a; font-size: 30px"
+                    ></span>
+
+                </div>
+                <h4>{{user.UserAnswer.Username}}</h4>
+            </div>
+        </div>
+        <div class="col-12 col-md-8 col-lg-10">
+            <div class="Answer-container badge-secondary p-4 rounded my-5">
+                <p>
+                    {{user.Answercode.answer}}
+                </p>
+
+                <div class="other-info mt-3 mb-3">
+                    <img src="codeimg/{{user._id}}.jpg" alt="" />
+                </div>
+                <div class="code pt-5 p-3">
+                    <div class="copy">copy</div>
+                    <p>
+                        {{user.Answercode.answercode}}
+                    </p>
+                </div>
+                <div class="video mt-3">
+                    <video src="codevideo/{{user._id}}.mp4" controls></video>
+                </div>
+            </div>
+        </div>
+    </div>
+    <span class="d-block" style="width: 100%; height: 1px; background-color: black"></span>
+    <div id="drop-like">
+        <span
+            class="iconify"
+            data-inline="false"
+            data-icon="fe:drop-down"
+            style="font-size: 24px"
+        ></span>
+    </div>
+
+    <div class="move" id="Liked">
+        <h2>Liked</h2>
+        <div class="row">
+            <div class="col-12 col-md-4 col-lg-2">
+                <div
+                    class="avathar-Answer rounded-pill ml-auto mr-auto mt-3 text-center position-relative"
+                >
+                    <img src="profile/{{user.UserAnswer._id}}.jpg" class="rounded-pill" alt="" />
+                    <div class="position-absolute icon">
+                        <span class="d-block">{{user.like}}</span>
+                        <span
+                            class="iconify"
+                            data-inline="false"
+                            data-icon="ant-design:like-filled"
+                            style="color: #106fa5; font-size: 30px"
+                        ></span>
+                    </div>
+                    <h4>{{user.UserAnswer.Username}}</h4>
+                </div>
+            </div>
+            <div class="col-12 col-md-8 col-lg-10">
+                <div class="Answer-container badge-secondary p-4 rounded my-5">
+                    <p>
+                       {{user.Answercode.answer}}
+                    </p>
+
+                    <div class="other-info mt-3 mb-3">
+                        <img src="codeimg/{{user._id}}.jpg" alt="" />
+                    </div>
+                    <div class="code pt-5 p-3">
+                        <div class="copy">copy</div>
+                        <p>
+                            {{user.Answercode.answer}}
+                        </p>
+                    </div>
+                    <div class="video mt-3">
+                        <video src="codevideo/{{user._id}}.mp4" controls></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <span class="d-block" style="width: 100%; height: 1px; background-color: black"></span>
+    <div id="drop-unlike">
+        <span
+            class="iconify"
+            data-inline="false"
+            data-icon="fe:drop-down"
+            style="font-size: 24px"
+        ></span>
+    </div>
+    <div class="unlike" id="unLiked">
+        <h2>Disliked</h2>
+        <div class="row">
+            <div class="col-12 col-md-4 col-lg-2">
+                <div
+                    class="avathar-Answer rounded-pill ml-auto mr-auto mt-3 position-relative text-center"
+                >
+                    <img src="profile/{{user.UserAnswer._id}}.jpg" class="rounded-pill" alt="" />
+                    <div class="position-absolute icon">
+                        <span class="d-block">{{user.dislike}}</span>
+                        <span
+                            class="iconify"
+                            data-inline="false"
+                            data-icon="ant-design:dislike-filled"
+                            style="font-size: 30px; color: blue"
+                        ></span>
+                    </div>
+                    <h4>{{user.UserAnswer.Username}}</h4>
+                </div>
+            </div>
+            <div class="col-12 col-md-8 col-lg-10">
+                <div class="Answer-container badge-secondary p-4 rounded my-5">
+                    <p>
+                        {{user.Answercode.answer}}
+                    </p>
+
+                    <div class="other-info mt-3 mb-3">
+                        <img src="codeimg/{{user._id}}.mp4" alt="" />
+                    </div>
+                    <div class="code pt-5 p-3">
+                        <div class="copy">copy</div>
+                        <p>
+                         {{user.Answercode.answercode}}
+                        </p>
+                    </div>
+                    <div class="video mt-3">
+                        <video src="codevideo/{{user._id}}.mp4" controls></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Q&A -->
+    <span class="d-block" style="width: 100%; height: 1px; background-color: black"></span>
+    <div id="drop-Q&A">
+        <span
+            class="iconify"
+            data-inline="false"
+            data-icon="fe:drop-down"
+            style="font-size: 24px"
+        ></span>
+    </div>
+
+    <div class="QA" id="QuestionAnswer">
+        <h2>Q&A</h2>
+        <div class="row">
+            <div class="col-12 col-md-4 col-lg-2">
+                <div
+                    class="avathar-Answer rounded-pill ml-auto mr-auto mt-3 position-relative text-center"
+                >
+                    <img src="image/nam.jpg" class="rounded-pill" alt="" />
+                    <div class="position-absolute icon">
+                        <span class="d-block">23</span>
+                        <span
+                            class="iconify"
+                            data-inline="false"
+                            data-icon="teenyicons:tick-circle-solid"
+                            style="color: #0be265; font-size: 20px"
+                        ></span>
+                    </div>
+                    <h4>done</h4>
+                </div>
+            </div>
+            <div class="col-12 col-md-8 col-lg-10">
+                <div class="Answer-container badge-secondary p-4 rounded my-5">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam illum
+                        odio animi expedita, vero aperiam incidunt earum officiis fugiat provident
+                        nostrum, culpa soluta quasi facilis temporibus dolor aspernatur esse
+                        deleniti!
+                    </p>
+
+                    <div class="other-info mt-3 mb-3">
+                        <img src="image/john-schnobrich-FlPc9_VocJ4-unsplash.jpg" alt="" />
+                    </div>
+                    <div class="code pt-5 p-3">
+                        <div class="copy">copy</div>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit quos
+                            incidunt corporis architecto ratione illo non tempora repudiandae esse,
+                            quisquam quas quibusdam necessitatibus at nihil laudantium similique
+                            rerum doloribus tempore!
+                        </p>
+                    </div>
+                    <div class="video mt-3">
+                        <video src="SampleVideo_1280x720_1mb.mp4" controls></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- blocked -->
+    <span class="d-block" style="width: 100%; height: 1px; background-color: black"></span>
+    <div id="drop-blocked">
+        <span
+            class="iconify"
+            data-inline="false"
+            data-icon="fe:drop-down"
+            style="font-size: 24px"
+        ></span>
+    </div>
+    <div class="block" id="blocked">
+        <h2>blocked</h2>
+        <div class="row">
+            <div class="col-12 col-md-4 col-lg-2">
+                <div
+                    class="avathar-Answer rounded-pill ml-auto mr-auto mt-3 position-relative text-center"
+                >
+                    <img src="profile/{{user.UserAnswer._id}}.jpg" class="rounded-pill" alt="" />
+                    <a href="/admin/delete?id={{user._id}}&Userid={{user.UserAnswer._id}}" ><input class="btn btn-danger" type="button" value="delete"></a>
+                    <div class="position-absolute icon">
+                        <span class="d-block">{{user.report}}</span>
+                        <span
+                            class="iconify"
+                            data-inline="false"
+                            data-icon="fluent:presence-blocked-12-regular"
+                            style="font-size: 30px; color: red"
+                        ></span>
+                    </div>
+                    <h4>{{user.UserAnswer.Username}}</h4>
+                </div>
+            </div>
+            <div class="col-12 col-md-8 col-lg-10">
+                <div class="Answer-container badge-secondary p-4 rounded my-5">
+                    <p>
+                      {{user.Answercode.answer}}
+                    </p>
+
+                    <div class="other-info mt-3 mb-3">
+                        <img src="codeimg/{{user._id}}.jpg" alt="" />
+                    </div>
+                    <div class="code pt-5 p-3">
+                        <div class="copy">copy</div>
+                        <p>
+                           {{user.Answercode.answercode}}
+                        </p>
+                    </div>
+                    <div class="video mt-3">
+                        <video src="codevideo/{{user._id}}.mp4" controls></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javaScript" src="javascripts/admin.js"></script>

@@ -1,0 +1,421 @@
+
+
+
+body {
+    overflow-x: hidden;
+}
+/*================= header section start ==================*/
+.logo {
+    width: 3em;
+    height: 3em;
+    margin-bottom: 1em;
+}
+.logo img {
+    width: 100%;
+}
+.navbar {
+    background-color: var(--Primery-bg-color);
+}
+.nav-item {
+    margin-left: 30px;
+}
+.avathar {
+    color: white;
+}
+/*======================== header section end ============================*/
+
+/* ==========================main section start ==============================*/
+
+
+/*========================= section1 start =================*/
+.section1 {
+    padding: 3rem;
+    max-height: 100ch;
+}
+
+/* ==============================section1 end=================== */
+
+/* error */
+.msg-container {
+    width: 70%;
+    height: 300px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    z-index: 100;
+}
+.message {
+
+   justify-content: center;
+   align-items: center;
+  text-align: center;
+    width: 300px;
+    height: 200px;
+    background-color: black;
+    color: azure;
+}
+
+
+.message-box {
+    position: fixed;
+    top: 10px;
+    width: 100%;
+    height: 100vh;
+    
+}
+#close{
+    position: absolute;
+    top: 10px;
+    right:10px ;
+    cursor: pointer;
+}
+
+/*=============================== section2 start================== */
+.section-container {
+
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://images.unsplash.com/photo-1505765050516-f72dcac9c60e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.section2 {
+  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-gap: 2px;
+    grid-template-areas: "svg btn search";
+}
+.svg-container {
+    grid-area: svg;
+}
+.svg-container svg {
+    width: 100%;
+    height: 100%;
+}
+.btn-c {
+    grid-area: btn;
+    position: relative;
+}
+.section2 .button {
+    width: 200px;
+    position: absolute;
+    top: 50px;
+    left: -50px;
+   
+    color: white;
+}
+.section2 .disabled{
+    width: 200px;
+    position: absolute;
+    top: 100px;
+    left: -50px;
+    background-color: var(--btn-color);
+    color: white;
+}
+.section2 .button:hover {
+    color: rgb(235, 235, 235);
+    
+}
+
+.search {
+    grid-area: search;
+ height: 400px;
+    overflow: hidden;
+   
+
+    
+}
+.search-bar {
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+    position: relative;
+}
+.search-bar input {
+    width: 100%;
+    border: 2px solid var(--Primery-bg-color);
+    border-top: none;
+    border-left: none;
+    background: none;
+    border-bottom-right-radius: 20px;
+}
+.search-bar input:focus {
+    outline: none;
+}
+
+.search-bar-icon {
+    position: absolute;
+    top: 0;
+    left: 85%;
+}
+.search-bar-icon a {
+    text-decoration: none;
+    color: var(--Primery-bg-color);
+}
+.search-bar-icon a:hover {
+    text-decoration: none;
+    color: var(--btn-color);
+}
+
+.Language-container{
+    margin:40px auto ;
+    width: 90%;
+    border: 1px solid var(--Primery-bg-color);
+    border-radius: 20px;
+    padding: 1px 0px 1px 10px ;
+    background-color: var(--btn-color);
+    color: white;
+    cursor: pointer;
+}
+.Language-container:hover{
+    background-color: var(--btn-hovre);
+}
+.Language-container label{
+    margin-bottom: 0px;
+}
+.section2 .Language-container input[type=checkbox]{
+    display: none;
+}
+/* ===============================section2 end======================= */
+
+
+/*============================= section3 start========================*/
+.section3 {
+    width: 100%;
+    
+}
+
+.section3 .card {
+    height: auto;
+}
+.card-img-cont{
+    width: 100%;
+    height: 200px;
+   
+}
+.card-img-cont img{
+    width: 100%;
+}
+/*================================ sectiion3 end ========================= */
+
+
+/*============================== main section end========================= */
+
+
+/*================================ footer start =============================*/
+footer{
+    width: 100%;
+    height: auto;
+    background-color: var(--Primery-bg-color);
+    margin-top: 50px;
+}
+footer a{
+    text-decoration: none !important;
+    color: white;
+}
+footer hr{
+    background-color: white;
+}
+.footer-cont1{
+    text-align: center;
+    padding: 30px;
+    display: grid;
+    color: white;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 40px;
+    grid-template-areas:"team   phone  location" ;
+}
+.footer-cont2{
+    padding: 40px;
+    display: grid;
+    color: white;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 80px;
+    grid-template-areas:"about  team-p  share" ; 
+}
+.team{
+    grid-area: team;
+    justify-self: center;
+    align-self: center;
+}
+.team h2{
+    font-size: 1.5em;
+}
+.phone{
+    grid-area: phone;
+    justify-self: center;
+    align-self: center;
+}
+.phone h2{
+    font-size: 1.5rem;
+}
+.location{
+    grid-area: location;
+    justify-self: center;
+    align-self: center;
+   
+}
+.location h2{
+    font-size: 1.5rem;
+}
+.about{
+    grid-area: about;
+}
+.team-p{
+    grid-area: team-p;
+  
+}
+.share{
+    grid-area: share;
+    position: relative;
+}
+.share .share-box{
+    width: 300px;
+    height: 30px;
+    margin: auto;
+}
+
+.share-box input{
+    width: 100%;  
+}
+.share-box input[type=text]{
+    border: none;
+    padding-left: 5px;
+}
+.share-box input[type=text]:focus{
+    border: none;
+    outline: none;
+}
+
+.share-box .icon-cont{
+    position: absolute;
+    top: 0;
+    left: 90%;
+   
+}
+.share-box .icon-cont svg{
+    color: blue;
+}
+.socialmeadia{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    
+}
+.socialmeadia ul{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+.socialmeadia svg{
+    color: white;
+}
+.socialmeadia img{
+    width: 30px;
+    height: 30px;
+   
+}
+/*============================== footer end====================== */
+
+
+
+@media (min-width: 1000px) {
+    .carousel img {
+        height: 90vh;
+        object-fit: cover;
+    }
+}
+
+/* ========================For Tablet======================= */
+@media (max-width: 768px) {
+    .section2 {
+        grid-template-areas:
+            "svg svg btn"
+            "search search search";
+    }
+    .section2 .button {
+        position: unset;
+    }
+    .section2 .disabled{
+        position: unset;
+    }
+    .footer-cont1{
+        grid-template-columns:1fr;
+        grid-template-areas: "team"
+        "phone"
+        "location"
+    }
+    .footer-cont2{
+        grid-template-columns:1fr;
+        grid-template-areas: "about"
+        "team-p"
+        "share"
+    }
+  
+.share-box .icon-cont{
+    position: absolute;
+    top: 0;
+    left: 75%;
+   
+}
+.search{
+    height: 200px;
+}
+ 
+}
+
+/*============================== For Mobile ====================*/
+
+@media (max-width: 420px) {
+
+    .section2 svg #arrow path{
+        transform: rotate(80deg);
+        transform-origin:42% 42% ;
+    }
+    .section2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "svg"
+            "btn"
+            "search";
+    }
+    .section2 .btn-c {
+        justify-self: center;
+        margin: 30px;
+    }
+    .section2 .button {
+        position: unset;
+    }
+    .section2 .disabled{
+        position: unset;
+    }
+    .footer-cont1{
+        margin-top: 30px;
+        grid-template-columns:1fr;
+        grid-template-areas: "team"
+        "phone"
+        "location"
+    }
+    .footer-cont2{
+        grid-template-columns:1fr;
+        grid-template-areas: "about"
+        "team-p"
+        "share"
+    }
+    .share .share-box{
+        width: 200px;
+    }
+    .search{
+        height: 200px;
+    }
+}

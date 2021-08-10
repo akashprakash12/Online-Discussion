@@ -1,0 +1,41 @@
+body {
+    background-color: #f5f7fa;
+}
+
+.testimonial-card .card-up {
+    height: 100px;
+    overflow: hidden;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+.card {
+    color: #f5f7fa;
+    background-color: rgb(19, 18, 18);
+}
+
+.aqua-gradient {
+    background: linear-gradient(49deg, #1c849a, #4f945d) !important;
+}
+.white {
+    border: 4px solid white;
+    border-radius: 100%;
+}
+.avatar {
+    width: 150px;
+    height: 150px;
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.img-fluid {
+    height: 100%;
+}
+*a {
+    text-decoration: none;
+    color: white;
+}
+hr {
+    background-color: white;
+}

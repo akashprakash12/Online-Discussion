@@ -1,0 +1,59 @@
+<head>
+    <link rel="stylesheet" href="stylesheets/profile.css">
+    <title>{{title}}</title>
+</head>
+ <body>
+        <section>
+            <div class="container-fluid overflow-hidden p-0">
+                <div class="row">
+                    <div class="col-sm-6 p-0">
+                        <div class="img-cont">
+                            <img class="bg-img" src="images/bg-img.jpg" alt="" />
+                            <div class="profile">
+                                <img class="rounded-pill" src="profile/{{user._id}}.jpg" alt="" />
+                                <div class="icon">
+                                    <label for="profile-pic"
+                                        ><img class="" src="images/bi_camera.svg" alt="" />
+                                        <input class="d-none" type="file" id="profile-pic" />
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="Name-field rounded-pill">
+                                <label for="my-name">{{user.Username}}</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 p-0">
+                        <section class="sub-section">
+                            <div class="notification">
+                                <img src="images/carbon_notification.svg" alt="" />
+                            </div>
+
+                            <div class="User-data">
+                                <h2>{{user.phone}}</h2>
+                                <span class="d-block"></span>
+                            </div>
+
+                            <div class="User-data">
+                                <h2>{{user.email}}</h2>
+                                <span class="d-block"></span>
+                            </div>
+
+                            <div class="User-data">
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum
+                                    tenetur, sed labore tempora unde fuga exercitationem hic
+                                    aspernatur eveniet enim libero ad quidem at beatae ducimus
+                                    similique consequatur quisquam odio.
+                                </p>
+                                <span class="d-block"></span>
+                                <div class="edit">
+                                    <img src="images/edit_pen.svg" alt="" />
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>

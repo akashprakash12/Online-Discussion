@@ -1,0 +1,90 @@
+
+
+/*========================= global variable start================ */
+
+
+/*========================= global variable end================ */
+
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+
+.container {
+    margin: 20px;
+}
+/* ===================svg image design================ */
+svg {
+    width: 100%;
+    height: 100%;
+}
+.svg {
+    height: 50vh;
+
+}
+
+/*========================= form section start======================== */
+.form {
+    height: 60vh;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+.col-sm-4 .btn {
+    margin: auto;
+    width: 50%;
+    background-color: var(--btn-color);
+    color: white;
+}
+.col-sm-4 .btn:hover {
+    background-color: var(--btn-hovre);
+    color: white;
+}
+.col-sm-4 span {
+    color: var(--btn-color);
+}
+
+.icon-cont {
+    display: flex;
+    height: 10vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.icon {
+    width: 2em;
+    height: 2em;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+.fab {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.icon:hover {
+    background-color: var(--btn-color);
+    border: none;
+    color: white;
+}
+form input[type="text"],
+input[type="password"] {
+    border: 1.2px solid var(--Primery-bg-color);
+    box-shadow: none;
+}
+form input[type="text"]:focus,
+input[type="password"]:focus {
+    border: 1.2px solid var(--btn-hovre);
+    outline: none;
+    box-shadow: none;
+}
+/*========================== form section end======================= */

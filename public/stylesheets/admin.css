@@ -1,0 +1,114 @@
+*::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 20px;
+    background-color: rgb(167, 218, 218);
+}
+*::-webkit-scrollbar-thumb {
+    background-color: rgb(49, 49, 49);
+    border-radius: 20px;
+}
+*::-webkit-scrollbar-track {
+    box-shadow: 0px 0px 7px 2px rgba(201, 25, 25, 94%) inset;
+}
+.svg-design {
+    position: absolute;
+    width: 50%;
+    height: 130vh;
+    top: 0;
+    left: -162px;
+    z-index: -1;
+}
+.svg-design svg {
+    width: 100%;
+    height: 100%;
+}
+.svg-design-2 {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 100%;
+    right: -6%;
+    z-index: -1;
+}
+.svg-design svg {
+    width: 100%;
+    height: 100%;
+}
+body {
+    background-image: url("/image/");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+.count {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(44, 44, 48);
+    top: 0;
+    left: 0;
+    color: white;
+    cursor: pointer;
+}
+.like {
+    width: 30px;
+    height: 30px;
+    top: 0;
+    right: 0;
+    color: white;
+    cursor: pointer;
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+video {
+    width: 100%;
+    height: 100%;
+}
+.avathar-Answer {
+    width: 100px;
+    height: 100px;
+}
+.Answer-container {
+    overflow-y: scroll;
+    height: 40vh;
+}
+.code {
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+.code .copy {
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    background-color: rgb(150, 40, 194);
+}
+.move {
+    display: none;
+}
+.unlike {
+    display: none;
+}
+.QA {
+    display: none;
+}
+.block {
+    display: none;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+
+    top: 0;
+    left: -30px;
+}
+.navbar-nav .nav-item > .nav-link {
+    color: white;
+}

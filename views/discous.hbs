@@ -1,0 +1,107 @@
+<head>
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="stylesheets/dicouse.css" />
+</head>
+<div class="container">
+     <h1 class="mt-4">Questions</h1>
+        
+            <a href="#answer" >answer_section</a>
+    <div class="back mt-5">
+        <a href="/" class="btn btn-info">back</a>
+        <div class="float-right">
+            <a href="/Question" class="btn btn-info">post Question</a>
+        </div>
+    </div>
+    {{#each response}}
+    <div class="Question mt-5">
+        <div class="avathar rounded-pill ml-auto mr-auto mt-3 text-center">
+            <img src="profile/{{this.userdata._id}}.jpg" class="rounded-pill" alt="" />
+
+            <h3>{{this.userdata.Username}}</h3>
+        </div>
+
+        <div class="Question-container badge-secondary p-4 rounded mt-5">
+            <p>
+                {{this.code.question}}
+            </p>
+
+            <div class="other-info mt-3 mb-3">
+                <img src="codeimg/{{this._id}}.jpg" alt="" />
+            </div>
+            <div class="code pt-5 p-3">
+                <div class="copy">copy</div>
+                <p>
+                    {{this.code.code}}
+                </p>
+            </div>
+            <div class="video mt-3">
+                <video src="codevideo/{{this._id}}.mp4" controls></video>
+            </div>
+        </div>
+    </div>
+
+{{/each}}
+    {{!-- answer section --}}
+    <div class="mt-5">
+        <h2 id="answer">Answer</h2>
+        <hr />
+        <div id="drop">
+            <span
+                class="iconify"
+                data-inline="false"
+                data-icon="fe:drop-down"
+                style="font-size: 24px"
+            ></span>
+        </div>
+    </div>
+{{#each answer}}
+    <div class="Answer move mt-5">
+        <form action="/discous?id={{this._id}}" method="post">
+        <div class="Question mt-5">
+            <div class="avathar-Answer rounded-pill ml-auto mr-auto mt-3 text-center">
+                <img src="profile/{{this.UserAnswer._id}}.jpg" class="rounded-pill" alt="" />
+
+                <h4>{{this.UserAnswer.Username}}</h4>
+            </div>
+
+            <div class="Answer-container badge-secondary p-4 rounded mt-5">
+                <p>
+                    {{this.Answercode.answer}}
+                </p>
+
+                <div class="other-info mt-3 mb-3">
+                    <img src="codeimg/{{this._id}}.jpg" alt="" />
+                </div>
+                <div class="code pt-5 p-3">
+                    <div class="copy" onclick="myFunction()">copy</div>
+                    <p id="myInput">
+                       {{this.Answercode.answercode}}
+                    </p>
+                </div>
+                <div class="video mt-3">
+                    <video src="codevideo/{{this._id}}.mp4" controls></video>
+                </div>
+            </div>
+              <div class="icon">
+                        <a class="like">  <span  class="iconify " data-inline="false" data-icon="topcoat:like" style="font-size: 30px;"></span>
+                            Like <input class="qty1" name="like" readonly="readonly" type="text" value="{{this.like}}" />
+                        </a>
+                        <a class="dislike"><span  class="iconify" data-inline="false" data-icon="clarity:heart-broken-solid" style="font-size: 30px;"></span>
+                            Dislike <input class="qty2"  name="dislike" readonly="readonly" type="text" value="{{this.dislike}}" />
+                        </a>
+                        <a class="like"><span class="iconify" data-inline="false" data-icon="ic:baseline-report" style="font-size: 30px;"></span>
+                            Report <input class="qty1"  name="report" readonly="readonly" type="text" value="{{this.report}}" />
+                        </a>
+                        <input type="submit" class="btn btn-info" value="Add">
+                     </div>
+        </div>
+        </form>
+    </div>
+
+ {{/each}}
+
+    <div class="mt-5 mb-4">
+        <a href="/answer" class="btn btn-danger">post Answer</a>
+    </div>
+</div>
+<script type="text/javaScript" src="javascripts/dicous.js"></script>
