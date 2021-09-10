@@ -13,8 +13,8 @@ const { object } = require("joi");
 const admin = require("../adminDb/admindb");
 var fs = require("fs");
 var path = require("path");
-// validataion
 
+//====================== validataion==================
 var schema = Joi.object().keys({
     Username: Joi.string().min(3).max(30).required(),
     email: Joi.string().email({ minDomainSegments: 2, tlds: { allow: ["com", "net"] } }),
@@ -39,19 +39,8 @@ var loginschema = Joi.object().keys({
         .required(),
 });
 
-/* GET home page. */
-router.get("/", function (req, res) {
-    var language = ["javascript", "java"];
-    var user = req.session.userdata;
-    res.render("index", { title: "Express", language, user });
-});
-router.get("/", function (req, res) {
-    if (!req.session.userdata) {
-        res.redirect("/sign-up");
-    } else {
-        res.redirect("/");
-    }
-});
+/////////////////////////////// GET Requests Start//////////////////////////////////////////
+// =====sign up get request start==========
 router.get("/sign-up", function (req, res) {
     if (req.session.userdata) {
         res.redirect("/");
@@ -61,7 +50,8 @@ router.get("/sign-up", function (req, res) {
         res.render("sign-up", { title: "Sign-Up", errMessage, userExist });
     }
 });
-
+// =====sign up get request end==========
+// =====login and logout get request start==========
 router.get("/login", (req, res) => {
     if (req.session.userdata) {
         res.redirect("/");
@@ -81,12 +71,34 @@ router.get("/logout", (req, res) => {
     });
     res.redirect("/login");
 });
+// =====login and logout get request start==========
 
+// ===========home page rout start===============
+router.get("/", function (req, res) {
+    var language = ["javascript", "java"];
+    var user = req.session.userdata;
+    res.render("index", { title: "Express", language, user });
+});
+router.get("/", function (req, res) {
+    if (!req.session.userdata) {
+        res.redirect("/sign-up");
+    } else {
+        res.redirect("/");
+    }
+});
 router.get("/team", (req, res) => {
     res.render("team", { title: "team" });
 });
 router.get("/about", (req, res) => {
     res.render("about", { title: "about" });
+});
+router.get("/User_P", (req, res) => {
+    var user = req.session.userdata;
+    if (!req.session.userdata) {
+        res.redirect("/");
+    } else {
+        res.render("profile", { title: "Profile", user });
+    }
 });
 
 router.get("/discous", (req, res) => {
@@ -100,7 +112,8 @@ router.get("/discous", (req, res) => {
         });
     }
 });
-
+// ===========home page rout end===============
+// ========question and answer get request start========== 
 router.get("/Question", (req, res) => {
     if (!req.session.userdata) {
         redirect("/");
@@ -115,16 +128,12 @@ router.get("/answer", (req, res) => {
         res.render("answer", { title: "Post-Answer" });
     }
 });
+// ========question and answer get request end========== 
+/////////////////////////////// GET Requests End//////////////////////////////////////////
 
-router.get("/User_P", (req, res) => {
-    var user = req.session.userdata;
-    if (!req.session.userdata) {
-        res.redirect("/");
-    } else {
-        res.render("profile", { title: "Profile", user });
-    }
-});
-// ===========================sign up page set up===============================
+
+/////////////////////////////// POST Requests Start//////////////////////////////////////////
+// ===========================sign up page set up start===============================
 
 router.post("/sign-up", (req, res) => {
     var { error } = schema.validate(req.body);
@@ -156,8 +165,8 @@ router.post("/sign-up", (req, res) => {
             });
     }
 });
-
-// ================================login page set up=================================
+// ===========================sign up page set up end===============================
+// =============================login page set up start==========================
 router.post("/login", (req, res) => {
     var { error } = loginschema.validate(req.body);
     if (error) {
@@ -184,6 +193,9 @@ router.post("/login", (req, res) => {
         });
     }
 });
+// =============================login page set up end==========================
+
+// ===============================home page set up start=============================
 
 router.post("/discous", (req, res) => {
     var id = req.query.id;
@@ -191,7 +203,8 @@ router.post("/discous", (req, res) => {
     AnswerInsertion.inserLikeDislikeReport(id, obj);
     res.redirect("/discous");
 });
-
+// ===============================home page set up end=============================
+//====================================== Question & Answer page set up start==========================
 router.post("/Question", (req, res) => {
     if (!req.session.userdata) {
         res.redirect("/");
@@ -210,7 +223,6 @@ router.post("/Question", (req, res) => {
                 let video = req.files.videoupload;
                 image.mv("./public/codeimg/" + response._id + ".jpg");
                 video.mv("./public/codevideo/" + response._id + ".mp4");
-                // console.log(data._id);
                 res.redirect("/discous");
             })
             .catch((error) => {
@@ -218,7 +230,6 @@ router.post("/Question", (req, res) => {
             });
     }
 });
-
 router.post("/answer", (req, res) => {
     if (!req.session.userdata) {
         res.redirect("/");
@@ -248,5 +259,8 @@ router.post("/answer", (req, res) => {
             });
     }
 });
+//====================================== Question & Answer page set up end==========================
+
+/////////////////////////////// POST Requests End//////////////////////////////////////////
 
 module.exports = router;

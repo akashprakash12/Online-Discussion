@@ -3,7 +3,7 @@ var router = express.Router();
 var admin = require("../adminDb/admindb");
 var fs = require("fs");
 
-
+// =========retrive data from db and post into admin page ====================== 
 router.get("/", (req, res) => {
     admin.RetriveReportedToAdmin().then((respo) => {
         var user = respo;
@@ -11,7 +11,7 @@ router.get("/", (req, res) => {
         res.render("admin", { title: "Admin", user });
     });
 });
-
+// ==================delate report user form db==============================
 router.get("/delete", (req, res) => {
     var reportid = req.query.id;
     var userid = req.query.Userid;
@@ -30,7 +30,9 @@ router.get("/delete", (req, res) => {
                             if (err) {
                                 console.log(err);
                             } else {
-                                // admin.deleteuser(userid)
+                                admin.deleteuser(userid).then((respo)=>{
+                                    // console.log();
+                                })
                             }
                         });
                     }

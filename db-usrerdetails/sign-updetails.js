@@ -5,6 +5,7 @@ var axios = require("axios");
 const { resolve, reject } = require("promise");
 
 module.exports = {
+//inser user to db (user registration)
     DoSignup: (data) => {
         return new Promise(async (resolve, reject) => {
             var fetch = await db
@@ -22,26 +23,11 @@ module.exports = {
                 db.get().collection(collection.Collection).insertOne(data).then(data);
                 resolve(data);
             }
-
-            // callback(data.ops[0]._id);
         });
     },
 
-    // checkUser:(data)=>{
-    //     return new Promise(async(resolve,reject)=>{
-    //  var fetch=await db.get().collection(collection.Collection).findOne({email:data.email}).then((data))
-    //  if (fetch) {
-    //      resolve(fetch)
-    //     console.log("user alradi exist");
-
-    // }else{
-    //     console.log("do sign up");
-    // }
-
-    //     })
-
-    // },
-
+   
+//========== for check user exist or not =======================
     Dologin: (logindata) => {
         return new Promise(async (resolve, reject) => {
             let loginStatus = false;
